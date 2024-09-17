@@ -3,8 +3,49 @@
 
 @include mat.core();
 
+.site-navbar {
+    background-color: #f3faff;
+    .site-navbar-inner {
+        display: flex;
+        justify-content: space-between;
+
+    .site-navbar-left > .site-navbar-list,
+    .site-navbar-right > .site-navbar-list {
+        list-style: none;
+        display: flex;
+        // margin: 0;
+        padding: 0;
+    }
+
+    }
+
+    * > .site-navbar-link {
+        padding-right: 20px;
+        padding-left: 20px;
+
+        margin-right: 5px;
+        margin-left: 5px;
+
+        font-family: "Roboto Slab", serif;;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        
+        display: inline-block;
+        padding: 3px 20px;
+
+        border-radius: 12px;
+    }
+
+
+    * > .site-navbar-link:hover {
+        background-color: #d8eeff;
+    }
+
+}
+
 #navbar {
-    background-color: rgb(161, 65, 0);
+    background-color: #a3d7ff;
     display: flex;
     color: white;
     padding: 12px;
@@ -16,8 +57,8 @@
             a {
                 display: inline-block;
                 font-size: x-large;
-                padding: 12px 30px
-
+                padding: 12px 40px;
+                font-family: cursive;
             }
 
             a:hover {
@@ -27,20 +68,22 @@
         }
 
         #links {
-            display: flex;
-            
+            display: flex;   
         }
     }
 }
 
 .navbar-link {
-    color: white;
+    color: #344552;;
+    // font-size: large;
     text-decoration: none;
     cursor: pointer;
 }
 
 .navbar-link-path {
+    font-weight: bold;
     margin-top: 12px;
+    margin-bottom: 12px;
     position: relative;
     display: inline-block;
     margin-left: 10px;
@@ -58,11 +101,58 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: white;
+    background-color: #d8eeff;
     transform: scaleX(0);
     transition: transform 0.3s ease;
 
 }
 .navbar-link-path:hover::before {
     transform: scaleX(1);
+}
+
+
+#home-fs-section {
+    background-image: url("../assets/simple-shing-2.svg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column-reverse;
+    background-color: #f5f6f7;
+    height: 100vh;
+
+    #home-fs-inner {
+        width: 60%;
+        #home-fs-group {
+            #home-fs-left {
+                margin-top: 100px;
+                margin-bottom: 100px;
+
+                h3 {
+                    span {
+                        font-size: 60px;
+                        display: block;
+                        color: black;
+                        margin-block: 40px 40px;
+                        writing-mode: horizontal-tb;
+                    }
+                    font-weight: bold;
+                    font-size: 80px;
+                    padding-bottom: 20px;
+                    // color: rgba(0, 36, 112, 0.616);
+                    color: #344552;
+                    // margin-block: 20px 20px;
+                    // writing-mode: horizontal-tb;
+                }
+                p {
+                    font-size: 18px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    color: rgb(90, 112, 117)
+
+                    // em {
+                    //     background-color: ;
+                    // }
+                }
+            }
+        }
+    }
 }
